@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+
+@font-face {
+  font-family: 'Altone';
+  src: url("assets/fonts/AltoneTrial-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url("assets/fonts/Georgia.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'PinyonScript';
+  src: url("assets/fonts/PinyonScript-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SaturdayChampagne';
+  src: url("assets/fonts/SaturdayChampagneDemo-Regular.otf") format("opentype");
+
+}
+
+
+body,html{
+  margin: 0 auto;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.btn-custom{
+  color: rgb(255, 255, 255);
+font-family: Georgia;
+border: none;
+background-color: rgba(189,35,40,0.97 );
+padding: 10px 50px;
+font-size: 20px;
+}
+
+.btn-custom{
+  color: rgb(255, 255, 255);
+font-family: Georgia;
+border: none;
+background-color: rgba(189,35,40,0.97 );
+padding: 10px 50px;
+font-size: 20px;
+}
+
+/* Importing Bootstrap SCSS file. */
+

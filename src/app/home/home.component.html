@@ -1,0 +1,168 @@
+<div class="home-container">
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="home-nav">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
+        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+          stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+          font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+          <g transform="scale(5.12,5.12)">
+            <path d="M0,9v2h50v-2zM0,24v2h50v-2zM0,39v2h50v-2z"></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div>
+      <span class="caption">Le Tandem</span>
+    </div>
+
+    <div>
+      <button class="btn-custom">Reserve</button>
+    </div>
+  </div>
+</div>
+<div fxLayout="row" fxLayoutAlign="space-between center" class="home-actions-container">
+  <div class="section-one" fxFlex="33" fxLayout="row" fxLayoutAlign="center center">
+    Reserve a Table
+  </div>
+  <div class="section-two" fxFlex="34" fxLayout="row" fxLayoutAlign="center center">
+    Reserve a Room
+  </div>
+  <div class="section-one" fxFlex="33" xfLayout="row" fxLayoutAlign="center center">
+    View Menu
+  </div>
+</div>
+
+<div class="welcome-section">
+  <img src="assets/images/bg-three.png" alt="Image" class="image">
+  <div class="card">
+    <span class="text-one">Welcome to Le Tandem</span>
+
+    <div fxLayout="column" fxLayoutAlign="center center" class="section-one">
+      <span class="text-two">Nestled in
+      </span>
+
+
+      <span class="text-two">
+        the heart of Accra</span>
+
+      <img src="assets/images/separator.svg">
+
+
+    </div>
+
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+      <span class="text-three">
+        The name ‘Le Tandem’ holds a special meaning that reflects the essence of our family-owned business. In cycling,
+        a tandem is a bicycle designed for two riders, both contributing to the journey, each reliant on the other for
+        balance and momentum.
+      </span>
+
+      <span class="text-three">
+        We have welcomed guests into this intimate setting, treating everyone like a member of our extended family.
+      </span>
+    </div>
+
+
+    <div>
+      <p class="text-four">Le tandem </p>
+    </div>
+  </div>
+</div>
+
+<div class="book-resturant-section" fxLayout="column" fxLayoutAlign="center center">
+  <span class="heading">Restaurant
+  </span>
+  <span class="caption">Exquisite blend of French culinary
+  </span>
+  <img src="assets/images/separator.svg">
+
+  <div class="book-container" fxLayout="column">
+    <div class="table-book">
+      <p class="text-one">Reserve Table
+      </p>
+
+      <div class="form">
+        <div class="input-container">
+          <i class="fa-regular fa-calendar icon-left"></i>
+          <input type="text" placeholder="Choose Date" [(ngModel)]="date" ngbDatepicker #d="ngbDatepicker"
+            (click)="d.toggle()">
+          <i class="fa-solid fa-angle-down icon-right"></i>
+        </div>
+
+
+        <div class="select-container">
+          <i class="fa-regular fa-clock icon-left"></i>
+
+          <select>
+            <option value="" disabled selected>Select Time</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <i class="fa-solid fa-angle-down icon-right"></i>
+        </div>
+
+
+        <div class="select-container">
+          <i class="fa-regular fa-user icon-left"></i>
+
+          <select>
+            <option value="" disabled selected>No of People </option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <i class="fa-solid fa-angle-down icon-right"></i>
+        </div>
+
+        <button class="btn-custom custom-btn">Find Table </button>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="gallery">
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    @for (slide of slides; track slide.img) {
+    <div ngxSlickItem class="slide tile">
+      <img src="{{slide.img}}" alt="" width="100%">
+    </div>
+    }
+  </ngx-slick-carousel>
+</div>
+
+<div class="menu-section">
+
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <span class="heading">Menu</span>
+    <span class="caption">Explore Our Elegant Menu</span>
+    <img src="assets/images/separator-red.svg">
+  </div>
+
+
+  <div class="menu-view" fxLayout="row">
+    <div class="indoor-section" fxFlex="45" fxLayout="column" fxLayoutAlign="end center" >
+      <button class="btn-custom">Indoor Seating Menu</button>
+    </div>
+    <div fxFlex="5"></div>
+    <div class="outdoor-section" fxFlex="45" fxLayout="column" fxLayoutAlign="end center" >
+      <button class="btn-custom">Pool Area Menu</button>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+<div class="book-hotel-section" fxLayout="column" fxLayoutAlign="center center">
+  <span class="heading">boutique-style hospitality
+  </span>
+  <span class="caption">Enjoy A Luxury Experience
+  </span>
+  <img src="assets/images/separator.svg">
+</div>
+

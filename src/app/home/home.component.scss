@@ -1,0 +1,348 @@
+.home-container {
+  background: url('/assets/images/bg.png');
+  height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.home-nav {
+  padding: 20px 50px;
+
+  .caption {
+    font-family: 'PinyonScript';
+    color: #ffffff;
+    font-size: 50px;
+  }
+
+
+
+
+}
+
+.home-actions-container {
+  min-height: 10vh;
+
+  .section-one {
+
+    background: #F2F1E7;
+    color: rgba(189, 35, 40, 0.97);
+    font-family: Georgia;
+    font-size: 25px;
+    min-height: 10vh;
+  }
+
+  .section-two {
+    background: #F4F4EF;
+    color: rgba(189, 35, 40, 0.97);
+    font-family: Georgia;
+    font-size: 25px;
+    min-height: 10vh;
+  }
+
+
+}
+
+
+
+
+.welcome-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background:
+    url('/assets/images/bg-two.png');
+  background-size: contain, cover;
+
+  .image {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: cover;
+  }
+
+  .card {
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: calc(70% - 10px);
+    /* Subtracting 30px from top and bottom */
+    width: 400px;
+    padding: 20px;
+    border: 1px solid rgb(162, 26, 32);
+    background: rgb(189, 35, 40);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+
+
+    .text-one {
+      font-family: 'Georgia';
+      font-size: 23px;
+    }
+
+    .text-two {
+      font-family: 'Georgia';
+      font-size: 38px;
+    }
+
+    .section-one {
+      padding-top: 20px;
+
+    }
+
+    .text-three {
+      font-family: "Georgia";
+      font-size: 18px;
+      font-weight: normal;
+      font-style: normal;
+      text-align: center;
+      color: #ffffff;
+
+    }
+
+    .text-four {
+      font-family: 'SaturdayChampagne';
+      font-size: 60px;
+      font-weight: normal;
+      font-style: normal;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+
+}
+
+.book-resturant-section {
+
+  background: url('/assets/images/bg-four.png');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .heading {
+    font-family: "Georgia";
+    font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    color: #ffffff;
+  }
+
+  .caption {
+
+
+    font-family: "Georgia";
+    font-size: 50px;
+    font-weight: normal;
+    font-style: normal;
+
+    color: #ffffff;
+
+  }
+
+  .table-book {
+
+    width: 339.7px;
+    min-height: 300px;
+
+    border-radius: 7px;
+
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.48));
+    padding: 10px 20px;
+    background: #ffffff;
+
+  }
+
+  .book-container {
+    padding-top: 30px;
+
+    .text-one {
+      font-family: "Georgia";
+      font-size: 24px;
+      font-weight: normal;
+      font-style: normal;
+      text-align: center;
+      color: #707070;
+    }
+
+    .form {
+
+      border: 2px solid #707070;
+      border-radius: 5px;
+
+      .input-container {
+        position: relative;
+
+      }
+
+      .input-container input {
+        width: 100%;
+        padding: 10px 40px;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 1px solid #707070;
+      }
+
+      .input-container .icon-left {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+
+      .input-container .icon-right {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+
+      .select-container {
+        position: relative;
+
+      }
+
+      .select-container select {
+        width: 100%;
+        padding: 10px 40px;
+        box-sizing: border-box;
+        appearance: none;
+        /* Remove default dropdown arrow */
+        -webkit-appearance: none;
+        /* Remove default dropdown arrow in Safari */
+        -moz-appearance: none;
+        /* Remove default dropdown arrow in Firefox */
+        background: transparent;
+        /* Remove default background */
+        border: none;
+        border-bottom: 1px solid #707070;
+      }
+
+      .select-container .icon-left {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+
+      .select-container .icon-right {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+
+      .custom-btn {
+        width: 100%;
+      }
+
+
+    }
+  }
+
+}
+
+.gallery {
+  background-color: #FAFAF9;
+  padding: 15px 20px;
+
+  .tile {
+    padding: 5px !important;
+  }
+}
+
+
+.book-hotel-section{
+  background: url('/assets/images/bg-six.png');
+  height: 90vh;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  .heading {
+    font-family: "Georgia";
+    font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    color: #ffffff;
+  }
+
+  .caption {
+
+
+    font-family: "Georgia";
+    font-size: 50px;
+    font-weight: normal;
+    font-style: normal;
+
+    color: #ffffff;
+
+  }
+
+
+}
+
+
+.menu-section {
+  min-height: 70vh;
+  background-color: #FAFAF9;
+  /* Set your background color here */
+  background-image: url('/assets/images/bg-five.png');
+  /* Set your background image path here */
+  background-size: cover;
+  /* Ensure the image covers the entire element */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  padding-top: 10px;
+
+  padding-left: 5%;
+  // padding-right: 5%;
+  padding-bottom: 5%;
+
+
+  .heading {
+    font-family: "Georgia";
+    font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    color: #9d1d21;
+  }
+
+  .caption {
+    font-family: "Georgia";
+    font-size: 50px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    color: #9d1d21;
+  }
+
+  .menu-view{
+    padding-top: 5%;
+    min-height: 600px;
+  }
+
+  .indoor-section{
+    background-image: url('/assets/images/indoor.png');
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+    border-radius: 9px;
+  }
+
+  .outdoor-section{
+    background-image: url('/assets/images/outdoor.png');
+    background-repeat: no-repeat;
+    border-radius: 9px;
+    padding-bottom: 50px;
+  }
+}
