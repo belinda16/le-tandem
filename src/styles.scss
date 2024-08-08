@@ -46,6 +46,16 @@ background-color: rgba(189,35,40,0.97 );
 padding: 10px 50px;
 font-size: 20px;
 }
+.space-bottom{
+  padding-bottom: 5%;
+}
 
 /* Importing Bootstrap SCSS file. */
 
+input:focus{
+  outline: none !important;
+}
+
+select:focus{
+  outline: none !important;
+}

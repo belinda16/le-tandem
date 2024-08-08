@@ -163,6 +163,73 @@
   </span>
   <span class="caption">Enjoy A Luxury Experience
   </span>
-  <img src="assets/images/separator.svg">
+  <img src="assets/images/separator.svg" class="space-bottom">
+
+  <div class="form-container" fxlayout="row" >
+    <div fxFlex="23" fxLayout="column" fxLayoutAlign="center center" class="form-section">
+      <div>Check In</div>
+      <div class="input-container">
+        <input type="text" placeholder="Date" [(ngModel)]="checkinDate" ngbDatepicker #checkinDatePicker="ngbDatepicker"
+          (click)="checkinDatePicker.toggle()">
+        <i class="fa-solid fa-angle-down icon-right"></i>
+      </div>
+
+    </div>
+    <div fxFlex="23" fxLayout="column"  fxLayoutAlign="center center" class="form-section">
+      <div>Check Out</div>
+      <div class="input-container">
+        <input type="text" placeholder="Date" [(ngModel)]="checkoutDate" ngbDatepicker #checkoutDatePicker="ngbDatepicker"
+          (click)="checkoutDatePicker.toggle()">
+        <i class="fa-solid fa-angle-down icon-right"></i>
+      </div>
+
+
+    </div>
+    <div fxFlex="27"  fxLayout="column"  fxLayoutAlign="center center"  class="form-section-two">
+      <div>Guests</div>
+      <div class="select-container">
+
+
+        <select>
+          <option value="" disabled selected>No.</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+        <i class="fa-solid fa-angle-down icon-right"></i>
+      </div>
+    </div>
+    <div fxFlex="27" class="btn-section" fxLayout="column" fxLayoutAlign="center center">
+      <div>Check</div>
+      <div>Availabilty</div>
+    </div>
+  </div>
 </div>
 
+
+<div class="hotel-galllery" fxLayout="column" fxLayoutGap="5%">
+
+  <div class="carousel">
+    <div class="carousel-image left">
+      <button (click)="prevImage()">&#10094;</button>
+      <img [src]="images[prevIndex]" alt="Previous Image">
+    </div>
+    <div class="carousel-image main">
+      <img [src]="images[currentIndex]" alt="Main Image">
+    </div>
+    <div class="carousel-image right">
+      <img [src]="images[nextIndex]" alt="Next Image">
+      <button (click)="nextImage()">&#10095;</button>
+    </div>
+  </div>
+
+
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <button class="btn-custom">Discover More</button>
+  </div>
+
+
+</div>
+
+
+<app-footer></app-footer>

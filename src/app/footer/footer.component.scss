@@ -1,0 +1,144 @@
+.footer-container {
+
+
+  .section-one {
+    height: 450px;
+
+
+    .contact-section {
+      background: #fafaf9;
+      color: #000000;
+      padding-left: 3%;
+
+
+      .text {
+        font-family: "Georgia";
+        font-size: 25px;
+        font-weight: normal;
+        font-style: normal;
+        color: #000000;
+      }
+
+      .text-one {
+        font-family: 'Altone';
+        font-size: 15px;
+        font-weight: normal;
+        font-style: normal;
+        color: #000000;
+      }
+
+      .text-two {
+        font-family: 'Altone';
+        font-size: 20px;
+        font-weight: normal;
+        font-style: normal;
+        color: #000000;
+      }
+    }
+
+    .email-section {
+      background: #9d1d21;
+      color: #ffffff;
+      padding-left: 3%;
+
+
+      .text {
+        font-family: "Georgia";
+        font-size: 25px;
+        font-weight: normal;
+        font-style: normal;
+        color: #ffffff;
+      }
+
+      .text-one {
+        font-family: 'Altone';
+        font-size: 15px;
+        font-weight: normal;
+        font-style: normal;
+        color: #ffffff;
+      }
+
+      .text-two {
+        font-family: 'Altone';
+        font-size: 20px;
+        font-weight: normal;
+        font-style: normal;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .section-two {
+    padding: 5% 10%;
+
+    .heading {
+      font-family: "Georgia";
+      font-size: 25px;
+      font-weight: normal;
+      font-style: normal;
+      color: #bd2328;
+    }
+
+    .sub-heading {
+      font-family: "Altone";
+      font-size: 15px;
+      font-weight: normal;
+      font-style: normal;
+      color: #000000;
+    }
+
+    .text-one {
+      font-family: "Altone";
+      font-size: 20px;
+      font-weight: normal;
+      font-style: normal;
+      color: #000000;
+    }
+
+    .sub-section {
+      padding-top: 10%;
+
+
+      input {
+        width: 100%;
+        background: #fafaf9;
+        border: none;
+        height: 40px;
+        padding: 3px 5px;
+      }
+
+      .btn-sub {
+        background: #bd2328;
+
+        font-family: "Georgia";
+        font-size: 15px;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .section-three{
+    background: #bd2328;
+    color: #ffffff;
+    padding: 10px 8%;
+
+
+    .links-section{
+
+  font-family: "Georgia";
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+    }
+
+    .logo{
+      font-family: 'PinyonScript';
+      color: #ffffff;
+      font-size: 40px;
+    }
+  }
+}
