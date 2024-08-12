@@ -1,13 +1,76 @@
-<div class="carousel">
-  <div class="carousel-image left">
-    <button (click)="prevImage()">&#10094;</button>
-    <img [src]="images[prevIndex]" alt="Previous Image">
+<div class="book-hotel-section" fxLayout="column">
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="home-nav">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
+        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+          stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+          font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+          <g transform="scale(5.12,5.12)">
+            <path d="M0,9v2h50v-2zM0,24v2h50v-2zM0,39v2h50v-2z"></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div>
+      <span class="caption">Le Tandem</span>
+    </div>
+
+    <div>
+      <button class="btn-custom">Reserve</button>
+    </div>
   </div>
-  <div class="carousel-image main">
-    <img [src]="images[currentIndex]" alt="Main Image">
+
+  <div fxLayout="column" fxLayoutAlign="center center" fxFlex fxLayoutGap="2%">
+    <span class="heading">boutique-style hospitality
+    </span>
+    <span class="caption">Enjoy A Luxury Experience
+    </span>
+    <img src="assets/images/separator.svg" class="space-bottom">
   </div>
-  <div class="carousel-image right">
-    <img [src]="images[nextIndex]" alt="Next Image">
-    <button (click)="nextImage()">&#10095;</button>
+</div>
+
+
+<div class="form-container" fxlayout="row" >
+  <div fxFlex="23" fxLayout="column" fxLayoutAlign="center center" class="form-section">
+    <div>Check In</div>
+    <div class="input-container">
+      <input type="text" placeholder="Date" [(ngModel)]="checkinDate" ngbDatepicker #checkinDatePicker="ngbDatepicker"
+        (click)="checkinDatePicker.toggle()">
+      <i class="fa-solid fa-angle-down icon-right"></i>
+    </div>
+
   </div>
+  <div fxFlex="23" fxLayout="column"  fxLayoutAlign="center center" class="form-section">
+    <div>Check Out</div>
+    <div class="input-container">
+      <input type="text" placeholder="Date" [(ngModel)]="checkoutDate" ngbDatepicker #checkoutDatePicker="ngbDatepicker"
+        (click)="checkoutDatePicker.toggle()">
+      <i class="fa-solid fa-angle-down icon-right"></i>
+    </div>
+
+
+  </div>
+  <div fxFlex="27"  fxLayout="column"  fxLayoutAlign="center center"  class="form-section-two">
+    <div>Guests</div>
+    <div class="select-container">
+
+
+      <select>
+        <option value="" disabled selected>No.</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+      <i class="fa-solid fa-angle-down icon-right"></i>
+    </div>
+  </div>
+  <div fxFlex="27" class="btn-section" fxLayout="column" fxLayoutAlign="center center">
+    <div>Check</div>
+    <div>Availabilty</div>
+  </div>
+</div>
+
+<div fxlayout="column">
+  <app-room-card></app-room-card>
 </div>

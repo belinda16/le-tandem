@@ -1,0 +1,162 @@
+.book-hotel-section {
+  background: url('/assets/images/bg-six.png');
+  height: 100vh;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  .heading {
+    font-family: "Georgia";
+    font-size: 28px;
+    font-weight: normal;
+    font-style: normal;
+    color: #ffffff;
+  }
+
+  .caption {
+
+
+    font-family: "Georgia";
+    font-size: 50px;
+    font-weight: normal;
+    font-style: normal;
+
+    color: #ffffff;
+
+  }
+
+
+}
+
+
+
+.form-container {
+  background-color: #ffffff;
+  height: 120px;
+  width: 650px;
+  margin-right: auto;
+    margin-left: auto;
+    margin-top: -5%;
+    filter: drop-shadow(3px 3px 1.5px rgba(0,0,0,0.11 ));
+
+
+  .btn-section {
+    background-color: #9d1d21;
+    color: #ffffff;
+    font-family: "Georgia";
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 35px;
+
+  }
+
+  .form-section {
+    font-family: "Georgia";
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    color: #5c5c5c;
+    position: relative;
+
+
+    .input-container {
+      position: relative;
+
+    }
+
+    .input-container input {
+      width: 100%;
+      padding: 10px 40px;
+      box-sizing: border-box;
+      border: none;
+    }
+
+
+    .input-container .icon-right {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+
+
+  }
+
+  .form-section::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 0;
+    height: 80%;
+    /* Adjust height as needed */
+    width: 1px;
+    /* Width of your border */
+    background-color: #7f7e7e;
+  }
+
+  .form-section-two {
+    font-family: "Georgia";
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    color: #5c5c5c;
+
+
+    .select-container {
+      position: relative;
+
+    }
+
+
+    .select-container select {
+      width: 100%;
+      padding: 10px 40px;
+      box-sizing: border-box;
+      appearance: none;
+      /* Remove default dropdown arrow */
+      -webkit-appearance: none;
+      /* Remove default dropdown arrow in Safari */
+      -moz-appearance: none;
+      /* Remove default dropdown arrow in Firefox */
+      background: transparent;
+      /* Remove default background */
+      border: none;
+      text-align: center;
+      /* Center the text */
+    }
+
+    .select-container .icon-left {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .select-container .icon-right {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+  }
+}
+
+.home-nav {
+  padding: 20px 50px;
+
+  .caption {
+    font-family: 'PinyonScript';
+    color: #ffffff;
+    font-size: 50px;
+  }
+
+
+
+
+}
