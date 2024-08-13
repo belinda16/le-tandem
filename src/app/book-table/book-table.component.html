@@ -65,12 +65,27 @@
       <i class="fa-solid fa-angle-down icon-right"></i>
     </div>
   </div>
-  <div fxFlex="27" class="btn-section" fxLayout="column" fxLayoutAlign="center center">
+  <div fxFlex="27" class="btn-section" fxLayout="column" fxLayoutAlign="center center" (click)="navigate('/hotel-booking')">
     <div>Check</div>
     <div>Availabilty</div>
   </div>
 </div>
 
-<div fxlayout="column">
+<div fxlayout="column" class="rooms-container">
   <app-room-card></app-room-card>
+
+
 </div>
+
+
+<div class="gallery-container">
+  <gallery [items]="images" thumbPosition="left"></gallery>
+</div>
+
+
+<div class="space-bottom">
+  <button class="btn-custom center" (click)="navigate('/hotel-booking')">Make Booking</button>
+</div>
+
+<app-footer></app-footer>
+

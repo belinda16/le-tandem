@@ -1,0 +1,3 @@
+<app-find-table *ngIf="active === 0" (backClick)="setNewIndex($event)"> </app-find-table>
+<app-select-seating-type *ngIf="active === 1" (backClick)="setNewIndex($event)"></app-select-seating-type>
+<app-details-reservation-form *ngIf="active === 2" (backClick)="setNewIndex($event)"></app-details-reservation-form>

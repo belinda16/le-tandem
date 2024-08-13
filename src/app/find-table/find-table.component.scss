@@ -1,0 +1,218 @@
+.book-room-form-container {
+  min-height: 100vh;
+  background-color: #fafaf9;
+  background-image: url("/assets/images/bg-five.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px 40px;
+
+  .form {
+    background: #ffffff;
+    padding: 35px;
+    min-width: 500px;
+    max-width: 830px;
+    max-height: 1030px;
+    min-height: 600px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+
+
+  }
+
+  .hr {
+    width: 100%;
+    height: 1px;
+    background-color: #CCCCCC;
+    border: none;
+  }
+
+  .heading-1 {
+    font-size: 30px;
+    text-align: center;
+    font-family: "Georgia";
+    font-weight: normal;
+    font-style: normal;
+    padding: 35px;
+  }
+
+  .heading-2 {
+    font-size: 23px;
+    text-align: center;
+    font-family: "Georgia";
+    font-weight: normal;
+    font-style: normal;
+
+    span {
+
+      border-bottom: 2px solid #C94549;
+    }
+
+
+    div {
+      margin-left: 15px;
+    }
+  }
+
+
+
+
+
+
+
+  .info-container,
+  .form-container {
+    flex: 1;
+  }
+
+}
+
+
+
+.form-row {
+  border-color: #cfcfcf;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+  padding-left: 5px;
+  min-width: 650px;
+  height: 50px;
+
+
+
+  .select-container {
+    position: relative;
+
+  }
+
+
+  .select-container select {
+    width: 100%;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    appearance: none;
+    /* Remove default dropdown arrow */
+    -webkit-appearance: none;
+    /* Remove default dropdown arrow in Safari */
+    -moz-appearance: none;
+    /* Remove default dropdown arrow in Firefox */
+    background: transparent;
+    /* Remove default background */
+    border: none;
+    border-right: 1px solid #c7c7c7;
+    text-align: center;
+    /* Center the text */
+  }
+
+  .select-container .icon-left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .select-container .icon-right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .input-container {
+    position: relative;
+
+  }
+
+  .input-container input {
+    width: 100%;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    border: none;
+    border-right: 1px solid #c7c7c7;
+  }
+
+
+  .input-container .icon-right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+
+  .btn-div {
+    font-family: "Georgia";
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    color: #ffffff;
+    background-color: #C94549;
+    cursor: pointer;
+  }
+}
+
+
+.section-one {
+  margin-top: 40px;
+}
+
+
+.section-two {
+  span {
+    font-family: "Altone";
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+  }
+}
+
+
+.section-three {
+
+
+  .heading {
+
+    font-family: "Georgia";
+    font-size: 23px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    color: #000000;
+
+  }
+
+
+  .available-section {
+
+    .date {
+      font-family: "Georgia";
+      font-size: 15px;
+      font-weight: normal;
+      font-style: normal;
+      text-align: left;
+      color: #6e6e6e;
+    }
+
+    .chip{
+      height: 30px;
+      width: 90%;
+      text-align: center;
+      font-family: "Altone";
+font-size: 15px;
+font-weight: normal;
+font-style: normal;
+color: #ffffff;
+border-radius: 4px;
+margin-bottom: 10%;
+padding-top: 5px;
+cursor: pointer;
+
+background: #c94549
+    }
+  }
+
+}

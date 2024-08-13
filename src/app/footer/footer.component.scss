@@ -10,6 +10,12 @@
       color: #000000;
       padding-left: 3%;
 
+      @media screen and (max-width: 600px) {
+        img{
+          width: 50px;
+        }
+      }
+
 
       .text {
         font-family: "Georgia";
@@ -17,6 +23,10 @@
         font-weight: normal;
         font-style: normal;
         color: #000000;
+
+        @media screen and (max-width: 600px) {
+          font-size: 18px;
+        }
       }
 
       .text-one {
@@ -25,6 +35,10 @@
         font-weight: normal;
         font-style: normal;
         color: #000000;
+
+        @media screen and (max-width: 600px) {
+          font-size: 9px;
+        }
       }
 
       .text-two {
@@ -33,6 +47,11 @@
         font-weight: normal;
         font-style: normal;
         color: #000000;
+
+
+        @media screen and (max-width: 600px) {
+          font-size: 13px;
+        }
       }
     }
 
@@ -41,6 +60,12 @@
       color: #ffffff;
       padding-left: 3%;
 
+      @media screen and (max-width: 600px) {
+        img{
+          width: 50px;
+        }
+      }
+
 
       .text {
         font-family: "Georgia";
@@ -48,6 +73,10 @@
         font-weight: normal;
         font-style: normal;
         color: #ffffff;
+
+        @media screen and (max-width: 600px) {
+          font-size: 18px;
+        }
       }
 
       .text-one {
@@ -56,6 +85,10 @@
         font-weight: normal;
         font-style: normal;
         color: #ffffff;
+
+        @media screen and (max-width: 600px) {
+          font-size: 9px;
+        }
       }
 
       .text-two {
@@ -64,6 +97,10 @@
         font-weight: normal;
         font-style: normal;
         color: #ffffff;
+
+        @media screen and (max-width: 600px) {
+          font-size: 13px;
+        }
       }
     }
   }
@@ -71,12 +108,23 @@
   .section-two {
     padding: 5% 10%;
 
+
+    .news-footer{
+      @media screen and (max-width: 600px) {
+        padding-bottom: 5%;
+      }
+    }
+
     .heading {
       font-family: "Georgia";
       font-size: 25px;
       font-weight: normal;
       font-style: normal;
       color: #bd2328;
+
+      @media screen and (max-width: 600px) {
+        font-size: 15px;
+      }
     }
 
     .sub-heading {
@@ -85,6 +133,10 @@
       font-weight: normal;
       font-style: normal;
       color: #000000;
+      @media screen and (max-width: 600px) {
+        font-size: 10px;
+      }
+
     }
 
     .text-one {
@@ -93,6 +145,10 @@
       font-weight: normal;
       font-style: normal;
       color: #000000;
+
+      @media screen and (max-width: 600px) {
+        font-size: 13px;
+      }
     }
 
     .sub-section {
@@ -105,6 +161,10 @@
         border: none;
         height: 40px;
         padding: 3px 5px;
+
+        @media screen and (max-width: 600px) {
+          height: 30px;
+        }
       }
 
       .btn-sub {
@@ -123,7 +183,11 @@
   .section-three{
     background: #bd2328;
     color: #ffffff;
-    padding: 1ccc0px 8%;
+    padding: 10px 8%;
+
+    @media screen and (max-width: 600px) {
+      padding: 10px;
+    }
 
 
     .links-section{
@@ -133,12 +197,21 @@
   font-weight: normal;
   font-style: normal;
   color: #ffffff;
+  cursor: pointer;
+
+  @media screen and (max-width: 600px) {
+    font-size: 10px;
+  }
     }
 
     .logo{
       font-family: 'PinyonScript';
       color: #ffffff;
       font-size: 40px;
+
+      @media screen and (max-width: 600px) {
+        font-size: 20px;
+      }
     }
   }
 }

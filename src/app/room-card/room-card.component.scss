@@ -1,6 +1,79 @@
-.room-card-container{
+.room-card-container {
 
-  .section-one{
+  .section-one {
 
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+
+    .heading {
+      font-family: "Georgia";
+      font-size: 40px;
+      font-weight: normal;
+      font-style: normal;
+      color: #c13035;
+    }
+
+    .text {
+      font-family: "Altone";
+      font-size: 20px;
+      font-weight: normal;
+      font-style: normal;
+      text-align: left;
+      color: #000000;
+    }
+
+    .price {
+      font-family: "Altone";
+      font-size: 57px;
+      font-weight: normal;
+      font-style: normal;
+      color: #c13035;
+    }
+
+    .rate {
+      font-family: "Altone";
+      font-size: 25px;
+      font-weight: normal;
+      font-style: normal;
+      color: #c13035;
+    }
+
+  }
+
+  .section-two {
+    min-height: 300px;
+    background-color: #FAFAF9;
+    /* Set your background color here */
+    background-image: url('/assets/images/bg-five.png');
+    /* Set your background image path here */
+    background-size: cover;
+    /* Ensure the image covers the entire element */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    padding: 5%;
+
+    .text {
+      font-family: "Altone Trial";
+      font-size: 15px;
+      font-weight: normal;
+      font-style: normal;
+      color: #000000;
+    }
+
+
+
+    .tile{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .border-right{
+      margin-top: 10px;
+      border-left: 1px dashed #000000;
+      height: 75px;
+      margin-bottom: 10px;
+    }
   }
 }

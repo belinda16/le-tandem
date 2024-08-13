@@ -3,13 +3,14 @@ import { Router } from '@angular/router';
 import { FlexLayoutModule } from 'ngx-flexible-layout';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-deatils-reservation-form-hotel',
   standalone: true,
   imports: [FlexLayoutModule],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  templateUrl: './deatils-reservation-form-hotel.component.html',
+  styleUrl: './deatils-reservation-form-hotel.component.scss'
 })
-export class FooterComponent {
+export class DeatilsReservationFormHotelComponent {
+
 
   constructor(private router: Router){
 
@@ -19,10 +20,4 @@ export class FooterComponent {
     this.router.navigate([route])
   }
 
-  scrollToTop(){
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  }
 }

@@ -3,6 +3,10 @@
   height: 90vh;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media screen and (max-width: 600px) {
+    background: url('/assets/images/mobile-bg-one.png')
+  }
 }
 
 
@@ -14,6 +18,11 @@
     font-family: 'PinyonScript';
     color: #ffffff;
     font-size: 50px;
+
+
+    @media screen and (max-width: 600px) {
+      font-size: 30px;
+    }
   }
 
 
@@ -31,6 +40,7 @@
     font-family: Georgia;
     font-size: 25px;
     min-height: 10vh;
+    cursor: pointer;
   }
 
   .section-two {
@@ -39,11 +49,55 @@
     font-family: Georgia;
     font-size: 25px;
     min-height: 10vh;
+    cursor: pointer;
   }
 
 
 }
 
+
+.welcome-mboile {
+  background: #a21a20;
+  padding: 6% 30px;
+
+
+  .heading {
+    font-family: "Georgia";
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    color: #ffffff;
+  }
+
+  .caption {
+    font-family: "Georgia";
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+
+
+  .text-three {
+    font-family: "Georgia";
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;
+
+  }
+
+  .text-four {
+    font-family: 'SaturdayChampagne';
+    font-size: 60px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+}
 
 
 
@@ -142,6 +196,12 @@
     font-style: normal;
 
     color: #ffffff;
+
+
+    @media screen and (max-width: 600px) {
+      font-size: 35px;
+      text-align: center;
+    }
 
   }
 
@@ -285,6 +345,11 @@
 
     color: #ffffff;
 
+    @media screen and (max-width: 600px) {
+      font-size: 35px;
+      text-align: center;
+    }
+
   }
 
 
@@ -292,6 +357,10 @@
     background-color: #ffffff;
     height: 120px;
     width: 600px;
+
+    @media screen and (max-width: 600px) {
+      width: 90% !important;
+    }
 
 
     .btn-section {
@@ -301,6 +370,7 @@
       font-size: 22px;
       font-weight: normal;
       line-height: 35px;
+      cursor: pointer;
 
     }
 
@@ -314,8 +384,17 @@
       position: relative;
 
 
+      @media screen and (max-width: 600px) {
+        background-color: #ffffff;
+      }
+
+
       .input-container {
         position: relative;
+
+        @media screen and (max-width: 600px) {
+          width: 80%;
+        }
 
       }
 
@@ -349,6 +428,11 @@
       width: 1px;
       /* Width of your border */
       background-color: #7f7e7e;
+
+
+      @media screen and (max-width: 600px) {
+        background-color:unset
+      }
     }
 
     .form-section-two {
@@ -359,9 +443,19 @@
       text-align: left;
       color: #5c5c5c;
 
+      @media screen and (max-width: 600px) {
+        background-color: #ffffff;
+      }
+
+
 
       .select-container {
         position: relative;
+
+        @media screen and (max-width: 600px) {
+          width: 80%;
+        }
+
 
       }
 
@@ -408,7 +502,7 @@
 }
 
 
-.hotel-galllery{
+.hotel-galllery {
   min-height: 100vh;
   background-color: #FAFAF9;
   /* Set your background color here */
@@ -436,11 +530,11 @@
     width: 100%;
   }
 
-  .left{
+  .left {
     margin-right: 30px
   }
 
-  .right{
+  .right {
     margin-left: 30px;
   }
 
@@ -511,6 +605,9 @@
   padding-bottom: 5%;
 
 
+
+
+
   .heading {
     font-family: "Georgia";
     font-size: 25px;
@@ -525,13 +622,24 @@
     font-size: 50px;
     font-weight: normal;
     font-style: normal;
-    text-align: left;
+    text-align: center;
     color: #9d1d21;
+
+
+    @media screen and (max-width: 600px) {
+      font-size: 35px;
+    }
   }
 
   .menu-view {
     padding-top: 5%;
     min-height: 600px;
+
+
+    @media screen and (max-width: 600px) {
+      min-height: 100vh;
+      row-gap: 20px;
+    }
   }
 
   .indoor-section {
@@ -539,6 +647,10 @@
     background-repeat: no-repeat;
     padding-bottom: 50px;
     border-radius: 9px;
+
+    @media screen and (max-width: 600px) {
+
+    }
   }
 
   .outdoor-section {

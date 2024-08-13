@@ -1,0 +1,112 @@
+<div class="book-room-form-container" fxLayout="column">
+
+
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="40" viewBox="0,0,256,256">
+      <g fill="#C4C4C4" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+        stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+        <g transform="scale(5.12,5.12)">
+          <path d="M0,9v2h50v-2zM0,24v2h50v-2zM0,39v2h50v-2z"></path>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="form-section"fxLayoutAlign="center center" fxFlex>
+
+
+    <div class="form" fxLayout="column" >
+
+      <div (click)="back()">
+        <i class="fa-solid fa-chevron-left me-2"></i>
+        <span>Back</span>
+      </div>
+      <div class="heading-1">Reservation at Le Tandem</div>
+      <div class="heading-2" fxLayout="row" fxLayoutAlign="center end">
+        <span>1. Find A Table</span>
+        <div>2. Your Details</div>
+      </div>
+
+      <div class="hr"></div>
+
+
+      <div class="section-one space-bottom">
+        <div class="form-row" fxLayout="row" >
+
+          <div fxFlex="22">
+            <div class="select-container">
+
+
+              <select>
+                <option value="" disabled selected>People</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <i class="fa-solid fa-angle-down icon-right"></i>
+            </div>
+          </div>
+          <div fxFlex="21">
+            <div class="input-container">
+              <input type="text" placeholder="Date" [(ngModel)]="date" ngbDatepicker #checkoutDatePicker="ngbDatepicker"
+                (click)="checkoutDatePicker.toggle()">
+              <i class="fa-solid fa-angle-down icon-right"></i>
+            </div>
+          </div>
+          <div fxFlex="22" >
+            <div class="select-container">
+
+
+              <select>
+                <option value="" disabled selected>Time</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <i class="fa-solid fa-angle-down icon-right"></i>
+            </div>
+          </div>
+          <div fxFlex="35" class="btn-div" (click)="nextClick()" fxLayout="row" fxLayoutAlign="center center" >
+            <span>Find A Table</span>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="center-text section-two space-bottom">
+        <span>Reserve a table now or check below for other available times and dates</span>
+      </div>
+
+
+      <div class="section-three"  fxLayout="column" fxLayoutGap="10px">
+        <span class="heading">Other Available Times</span>
+
+        <div class="hr"></div>
+
+        <div class="available-section">
+          <p class="date">Monday 24 June, 2024</p>
+
+          <div fxLayout="row wrap">
+            <div fxFlex="20" *ngFor="let time of times" fxLayout="row" fxLayoutAlign="center center" (click)="nextClick()">
+
+              <span class="chip">
+                <img src="assets/images/table.svg">
+                {{time}}
+              </span>
+
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>

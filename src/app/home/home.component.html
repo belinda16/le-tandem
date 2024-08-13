@@ -1,7 +1,19 @@
 <div class="home-container">
   <div fxLayout="row" fxLayoutAlign="space-between center" class="home-nav">
-    <div>
+    <div class="no-mobile-flex">
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
+        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+          stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+          font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+          <g transform="scale(5.12,5.12)">
+            <path d="M0,9v2h50v-2zM0,24v2h50v-2zM0,39v2h50v-2z"></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div class="show-flex">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0,0,256,256">
         <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
           stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
           font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -16,24 +28,24 @@
       <span class="caption">Le Tandem</span>
     </div>
 
-    <div>
-      <button class="btn-custom">Reserve</button>
+    <div class="no-mobile-flex">
+      <button class="btn-custom"  (click)="navigate('/resturant-booking')">Reserve</button>
     </div>
   </div>
 </div>
-<div fxLayout="row" fxLayoutAlign="space-between center" class="home-actions-container">
-  <div class="section-one" fxFlex="33" fxLayout="row" fxLayoutAlign="center center">
+<div fxLayout="row"  fxLayout.xs="column" fxLayoutAlign="space-between center" fxLayoutAlign.xs="none" class="home-actions-container">
+  <div class="section-one" fxFlex="33"   fxFlex.xs="100"  fxLayout="row" fxLayoutAlign="center center"  (click)="navigate('/resturant-booking')">
     Reserve a Table
   </div>
-  <div class="section-two" fxFlex="34" fxLayout="row" fxLayoutAlign="center center">
+  <div class="section-two" fxFlex="34"  fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center center"   (click)="navigate('/hotel-booking')">
     Reserve a Room
   </div>
-  <div class="section-one" fxFlex="33" xfLayout="row" fxLayoutAlign="center center">
+  <div class="section-one" fxFlex="33" fxFlex.xs="100"  xfLayout="row" fxLayoutAlign="center center">
     View Menu
   </div>
 </div>
 
-<div class="welcome-section">
+<div class="welcome-section no-mobile-flex">
   <img src="assets/images/bg-three.png" alt="Image" class="image">
   <div class="card">
     <span class="text-one">Welcome to Le Tandem</span>
@@ -68,6 +80,37 @@
       <p class="text-four">Le tandem </p>
     </div>
   </div>
+</div>
+
+<div class="welcome-mboile show-flex" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+
+  <span class="heading">Welcome To Le Tandem</span>
+  <span class="caption">Nestled in the heart of Accra
+  </span>
+
+  <img src="assets/images/separator.svg" width="150" class="space-bottom">
+
+
+  <img src="assets/images/mobile-imgone.png">
+
+
+  <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+    <span class="text-three">
+      The name ‘Le Tandem’ holds a special meaning that reflects the essence of our family-owned business. In cycling,
+      a tandem is a bicycle designed for two riders, both contributing to the journey, each reliant on the other for
+      balance and momentum.
+    </span>
+
+    <span class="text-three">
+      We have welcomed guests into this intimate setting, treating everyone like a member of our extended family.
+    </span>
+  </div>
+
+
+  <div>
+    <p class="text-four">Le tandem </p>
+  </div>
+
 </div>
 
 <div class="book-resturant-section" fxLayout="column" fxLayoutAlign="center center">
@@ -116,7 +159,7 @@
           <i class="fa-solid fa-angle-down icon-right"></i>
         </div>
 
-        <button class="btn-custom custom-btn">Find Table </button>
+        <button class="btn-custom custom-btn" (click)="navigate('/resturant-booking')">Find Table </button>
 
       </div>
     </div>
@@ -128,7 +171,7 @@
   <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
     @for (slide of slides; track slide.img) {
     <div ngxSlickItem class="slide tile">
-      <img src="{{slide.img}}" alt="" width="100%">
+      <img src="{{slide.img}}" alt="" width="100%" class="img">
     </div>
     }
   </ngx-slick-carousel>
@@ -143,12 +186,12 @@
   </div>
 
 
-  <div class="menu-view" fxLayout="row">
-    <div class="indoor-section" fxFlex="45" fxLayout="column" fxLayoutAlign="end center" >
+  <div class="menu-view" fxLayout="row" fxLayout.xs="column">
+    <div class="indoor-section" fxFlex="45" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="end center" >
       <button class="btn-custom">Indoor Seating Menu</button>
     </div>
-    <div fxFlex="5"></div>
-    <div class="outdoor-section" fxFlex="45" fxLayout="column" fxLayoutAlign="end center" >
+    <div fxFlex="5" class="no-mobile-flex"></div>
+    <div class="outdoor-section" fxFlex="45" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="end center" >
       <button class="btn-custom">Pool Area Menu</button>
     </div>
   </div>
@@ -165,8 +208,8 @@
   </span>
   <img src="assets/images/separator.svg" class="space-bottom">
 
-  <div class="form-container" fxlayout="row" >
-    <div fxFlex="23" fxLayout="column" fxLayoutAlign="center center" class="form-section">
+  <div class="form-container" fxlayout="row" fxLayout.xs="column" >
+    <div fxFlex="23" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="center center" class="form-section ">
       <div>Check In</div>
       <div class="input-container">
         <input type="text" placeholder="Date" [(ngModel)]="checkinDate" ngbDatepicker #checkinDatePicker="ngbDatepicker"
@@ -175,7 +218,7 @@
       </div>
 
     </div>
-    <div fxFlex="23" fxLayout="column"  fxLayoutAlign="center center" class="form-section">
+    <div fxFlex="23" fxFlex.xs="100" fxLayout="column"  fxLayoutAlign="center center" class="form-section">
       <div>Check Out</div>
       <div class="input-container">
         <input type="text" placeholder="Date" [(ngModel)]="checkoutDate" ngbDatepicker #checkoutDatePicker="ngbDatepicker"
@@ -185,11 +228,9 @@
 
 
     </div>
-    <div fxFlex="27"  fxLayout="column"  fxLayoutAlign="center center"  class="form-section-two">
+    <div fxFlex="27"  fxFlex.xs="100" fxLayout="column"  fxLayoutAlign="center center"  class="form-section-two">
       <div>Guests</div>
       <div class="select-container">
-
-
         <select>
           <option value="" disabled selected>No.</option>
           <option value="1">Option 1</option>
@@ -199,7 +240,7 @@
         <i class="fa-solid fa-angle-down icon-right"></i>
       </div>
     </div>
-    <div fxFlex="27" class="btn-section" fxLayout="column" fxLayoutAlign="center center">
+    <div fxFlex="27" fxFlex.xs="100" class="btn-section" fxLayout="column" fxLayoutAlign="center center" (click)="navigate('/hotel-booking')">
       <div>Check</div>
       <div>Availabilty</div>
     </div>
@@ -207,7 +248,7 @@
 </div>
 
 
-<div class="hotel-galllery" fxLayout="column" fxLayoutGap="5%">
+<div class="hotel-galllery no-mobile-flex" fxLayout="column" fxLayoutGap="5%">
 
   <div class="carousel">
     <div class="carousel-image left">
@@ -225,10 +266,15 @@
 
 
   <div fxLayout="row" fxLayoutAlign="center center">
-    <button class="btn-custom">Discover More</button>
+    <button class="btn-custom" (click)="navigate('/book-room')">Discover More</button>
   </div>
 
 
+</div>
+
+
+<div class="hotel-galllery show-flex" fxLayout="column" fxLayoutGap="10px">
+  <img *ngFor="let image of images" [src]="image">
 </div>
 
 

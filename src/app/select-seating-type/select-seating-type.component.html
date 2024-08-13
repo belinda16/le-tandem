@@ -12,7 +12,16 @@
   </div>
 
   <div class="form-section" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+
+
+
     <div class="select">
+
+      <div (click)="back()">
+        <i class="fa-solid fa-chevron-left me-2"></i>
+        <span>Back</span>
+      </div>
+
       <div class="heading-1">Reservation at Le Tandem</div>
       <div class="heading-2">Select A Seating Type</div>
       <div class="heading-3">The following options are available for a reservation on June 20th, 7:00 pm.</div>
@@ -22,7 +31,7 @@
           <div>Le Tandem Restaurant</div>
           <span>Indoors</span>
         </div>
-        <button>Selected</button>
+        <button  (click)="next()">Select</button>
       </div>
       <hr>
       <div class="select-container" fxLayout="row" fxLayoutAlign="space-between center" >
@@ -30,7 +39,7 @@
           <div>Le Tandem Pool</div>
           <span>Outside</span>
         </div>
-        <button>Selected</button>
+        <button (click)="next()">Select</button>
       </div>
       <hr>
 

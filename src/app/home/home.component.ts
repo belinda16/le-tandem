@@ -1,18 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgbDatepicker, NgbDatepickerModule, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { FlexLayoutModule } from 'ngx-flexible-layout';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { FooterComponent } from "../footer/footer.component";
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FlexLayoutModule, FormsModule, NgbDatepickerModule, SlickCarouselModule, FooterComponent],
+  imports: [FlexLayoutModule, FormsModule, NgbDatepickerModule, SlickCarouselModule, FooterComponent, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
 
   date!: any
@@ -30,13 +32,29 @@ export class HomeComponent {
     { img: "assets/images/gallery-one.png" },
   ];
 
+  constructor(private router: Router){
+
+  }
+
+  navigate(route: string){
+    this.router.navigate([route])
+  }
+
+  ngOnInit(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+
+  }
 
 
 
   slideConfig = {
-    "slidesToShow": 4, "slidesToScroll": 1,
+    "slidesToShow": 3, "slidesToScroll": 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    variableWidth: true,
   };
 
 

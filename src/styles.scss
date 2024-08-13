@@ -23,39 +23,85 @@
 }
 
 
-body,html{
+body,
+html {
   margin: 0 auto;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
-.btn-custom{
+.btn-custom {
   color: rgb(255, 255, 255);
-font-family: Georgia;
-border: none;
-background-color: rgba(189,35,40,0.97 );
-padding: 10px 50px;
-font-size: 20px;
+  font-family: Georgia;
+  border: none;
+  background-color: rgba(189, 35, 40, 0.97);
+  padding: 10px 50px;
+  font-size: 20px;
 }
 
-.btn-custom{
+.btn-custom {
   color: rgb(255, 255, 255);
-font-family: Georgia;
-border: none;
-background-color: rgba(189,35,40,0.97 );
-padding: 10px 50px;
-font-size: 20px;
+  font-family: Georgia;
+  border: none;
+  background-color: rgba(189, 35, 40, 0.97);
+  padding: 10px 50px;
+  font-size: 20px;
+  cursor: pointer;
 }
-.space-bottom{
+
+.space-bottom {
   padding-bottom: 5%;
 }
 
 /* Importing Bootstrap SCSS file. */
 
-input:focus{
+input:focus {
   outline: none !important;
 }
 
-select:focus{
+select:focus {
   outline: none !important;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.center-text {
+  text-align: center;
+}
+
+
+.me-2 {
+  margin-right: 2rem;
+}
+
+
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+
+.no-mobile-flex{
+  display: flex;
+  @media screen and (max-width: 600px) {
+    display: none  !important;
+  }
+}
+
+
+.show-flex{
+  display: none !important;
+  @media screen and (max-width: 600px) {
+    display: flex  !important;
+  }
+}
+
+
+.bg-white{
+  background-color: #ffffff;
 }
