@@ -22,6 +22,10 @@
 
     color: #ffffff;
 
+    @media screen and (max-width: 600px) {
+      font-size: 30px !important;
+    }
+
   }
 
 
@@ -37,6 +41,12 @@
     margin-left: auto;
     margin-top: -5%;
     filter: drop-shadow(3px 3px 1.5px rgba(0,0,0,0.11 ));
+
+
+    @media screen and (max-width: 600px) {
+      width: 90% !important;
+      margin-top: -50% !important;
+    }
 
 
   .btn-section {
@@ -58,9 +68,18 @@
     color: #5c5c5c;
     position: relative;
 
+    @media screen and (max-width: 600px) {
+      background-color: #ffffff;
+      padding-top: 10px;
+    }
+
 
     .input-container {
       position: relative;
+
+      @media screen and (max-width: 600px) {
+        width: 80%;
+      }
 
     }
 
@@ -94,6 +113,7 @@
     width: 1px;
     /* Width of your border */
     background-color: #7f7e7e;
+    background-color: unset;
   }
 
   .form-section-two {
@@ -104,9 +124,19 @@
     text-align: left;
     color: #5c5c5c;
 
+    @media screen and (max-width: 600px) {
+      background-color: #ffffff;
+    }
+
+
 
     .select-container {
       position: relative;
+
+      @media screen and (max-width: 600px) {
+        width: 80%;
+      }
+
 
     }
 
@@ -164,6 +194,11 @@
 
 .rooms-container{
   padding-top: 80px;
+
+
+  @media screen and (max-width: 600px) {
+    padding-top: 55%;
+  }
 }
 
 

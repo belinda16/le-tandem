@@ -1,10 +1,29 @@
 .room-card-container {
 
+  .section-x {
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 5%;
+
+    .text {
+      font-family: "Altone";
+      font-size: 20px;
+      font-weight: normal;
+      font-style: normal;
+      text-align: left;
+      color: #000000;
+
+      @media screen and (max-width: 600px) {
+        font-size: 12px;
+      }
+    }
+  }
+
   .section-one {
 
     padding-left: 10%;
     padding-right: 5%;
-    padding-bottom: 5%;
+
 
     .heading {
       font-family: "Georgia";
@@ -12,6 +31,10 @@
       font-weight: normal;
       font-style: normal;
       color: #c13035;
+
+      @media screen and (max-width: 600px) {
+        font-size: 28px;
+      }
     }
 
     .text {
@@ -29,6 +52,10 @@
       font-weight: normal;
       font-style: normal;
       color: #c13035;
+
+      @media screen and (max-width: 600px) {
+        font-size: 30px;
+      }
     }
 
     .rate {
@@ -37,6 +64,10 @@
       font-weight: normal;
       font-style: normal;
       color: #c13035;
+
+      @media screen and (max-width: 600px) {
+        font-size: 15px;
+      }
     }
 
   }
@@ -55,21 +86,31 @@
     padding: 5%;
 
     .text {
-      font-family: "Altone Trial";
+      font-family: "Altone";
       font-size: 15px;
       font-weight: normal;
       font-style: normal;
       color: #000000;
+
+      @media screen and (max-width: 600px) {
+        font-size: 10px;
+      }
     }
 
 
 
-    .tile{
+    .tile {
       padding-left: 15px;
       padding-right: 15px;
+
+      img{
+        @media screen and (max-width: 600px) {
+          width: 50px;
+        }
+      }
     }
 
-    .border-right{
+    .border-right {
       margin-top: 10px;
       border-left: 1px dashed #000000;
       height: 75px;

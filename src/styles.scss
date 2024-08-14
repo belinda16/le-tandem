@@ -105,3 +105,10 @@ a{
 .bg-white{
   background-color: #ffffff;
 }
+
+
+.remove-border{
+  @media screen and (max-width: 600px) {
+    border-right: none  !important;
+  }
+}

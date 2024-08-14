@@ -6,11 +6,12 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { FooterComponent } from "../footer/footer.component";
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FlexLayoutModule, FormsModule, NgbDatepickerModule, SlickCarouselModule, FooterComponent, CommonModule],
+  imports: [FlexLayoutModule, FormsModule, NgbDatepickerModule, SlickCarouselModule, FooterComponent, CommonModule, MenuComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

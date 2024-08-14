@@ -7,6 +7,12 @@
   background-repeat: no-repeat;
   padding: 20px 40px;
 
+  @media screen and (max-width: 600px) {
+    padding: 20px;
+  }
+
+
+
   .form {
     background: #ffffff;
     padding: 35px;
@@ -16,6 +22,15 @@
     min-height: 600px;
     border: 1px solid #c4c4c4;
     border-radius: 5px;
+
+
+    @media screen and (max-width: 600px) {
+      min-width: unset;
+      max-width: unset;
+      max-height: unset;
+      min-height: unset;
+      padding: 20px;
+    }
 
 
   }
@@ -79,6 +94,12 @@
   height: 50px;
 
 
+  @media screen and (max-width: 600px) {
+    min-width: unset;
+    padding-left: unset;
+  }
+
+
 
   .select-container {
     position: relative;
@@ -131,6 +152,8 @@
     box-sizing: border-box;
     border: none;
     border-right: 1px solid #c7c7c7;
+
+
   }
 
 
@@ -151,6 +174,14 @@
     color: #ffffff;
     background-color: #C94549;
     cursor: pointer;
+
+    @media screen and (max-width: 600px) {
+    border-color: #cfcfcf;
+    border-width: 1px;
+    border-style: solid;
+    }
+
+
   }
 }
 
@@ -161,6 +192,12 @@
 
 
 .section-two {
+
+  @media screen and (max-width: 600px) {
+  padding-top: 5%;
+
+  }
+
   span {
     font-family: "Altone";
     font-size: 15px;

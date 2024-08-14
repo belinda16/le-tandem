@@ -7,6 +7,12 @@
   background-repeat: no-repeat;
   padding: 20px 40px;
 
+
+  @media screen and (max-width: 600px) {
+
+    padding: 20px;
+  }
+
   .select {
     background: #ffffff;
     padding: 35px;
@@ -14,6 +20,16 @@
     min-height: 600px;
     border: 1px solid #c4c4c4;
     border-radius: 5px;
+
+
+
+    @media screen and (max-width: 600px) {
+      min-width: unset;
+      max-width: unset;
+      max-height: unset;
+      min-height: unset;
+      padding: 20px;
+    }
   }
 
   .heading-1 {

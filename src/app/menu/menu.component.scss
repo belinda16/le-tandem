@@ -1,0 +1,45 @@
+.full-screen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #bd2328;
+  color: white;
+  z-index: 1000; /* Ensure it's on top */
+
+
+  .links{
+    font-family: "Altone";
+font-size: 70px;
+font-weight: bold;
+font-style: normal;
+text-align: left;
+color: #ffffff;
+cursor: pointer;
+
+@media screen and (max-width: 600px) {
+  font-size: 40px;
+}
+  }
+}
+
+
+.home-nav {
+  padding: 20px 50px;
+
+  .caption {
+    font-family: 'PinyonScript';
+    color: #ffffff;
+    font-size: 50px;
+
+
+    @media screen and (max-width: 600px) {
+      font-size: 30px;
+    }
+  }
+
+
+
+
+}

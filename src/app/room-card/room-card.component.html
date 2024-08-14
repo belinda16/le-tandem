@@ -4,8 +4,6 @@
       <span class="heading">Le Tandem Room Name
       </span>
 
-      <span class="text">Each room features elegant décor, premium amenities, and plush bedding to ensure a restful and rejuvenating stay. Enjoy the warm, personalised service of our establishment and make yourself at home in the heart of Accra.
-      </span>
     </div>
     <div fxFlex="30" fxLayout="column" fxLayoutAlign="center center">
       <span class="price">$150</span>
@@ -13,11 +11,21 @@
     </div>
   </div>
 
-  <div class="section-two" fxLayout="row" fxLayoutAlign="space-around center">
+  <div class="section-x" fxLayout="row">
+    <div fxFlex="70" fxFlex.xs="100"  fxLayout="column">
+
+
+      <span class="text">Each room features elegant décor, premium amenities, and plush bedding to ensure a restful and rejuvenating stay. Enjoy the warm, personalised service of our establishment and make yourself at home in the heart of Accra.
+      </span>
+    </div>
+
+  </div>
+
+  <div class="section-two" fxLayout="row" fxLayout.xs="row wrap" fxLayoutAlign="space-around center" fxLayoutAlign.xs="none">
 
 
 
-    <div  fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px" *ngFor="let facility of amenities; let i = index;" class="tile">
+    <div  fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px" *ngFor="let facility of amenities; let i = index;" class="tile" fxFlex.xs="33">
 
       <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
 

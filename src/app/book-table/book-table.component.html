@@ -1,22 +1,12 @@
 <div class="book-hotel-section" fxLayout="column">
   <div fxLayout="row" fxLayoutAlign="space-between center" class="home-nav">
-    <div>
-      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
-        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-          stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
-          font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-          <g transform="scale(5.12,5.12)">
-            <path d="M0,9v2h50v-2zM0,24v2h50v-2zM0,39v2h50v-2z"></path>
-          </g>
-        </g>
-      </svg>
-    </div>
+    <app-menu></app-menu>
 
     <div>
       <span class="caption">Le Tandem</span>
     </div>
 
-    <div>
+    <div class="no-mobile-flex">
       <button class="btn-custom">Reserve</button>
     </div>
   </div>
@@ -31,8 +21,8 @@
 </div>
 
 
-<div class="form-container" fxlayout="row" >
-  <div fxFlex="23" fxLayout="column" fxLayoutAlign="center center" class="form-section">
+<div class="form-container" fxlayout="row" fxLayout.xs="column">
+  <div fxFlex="23"   fxFlex.xs="100"fxLayout="column" fxLayoutAlign="center center" class="form-section">
     <div>Check In</div>
     <div class="input-container">
       <input type="text" placeholder="Date" [(ngModel)]="checkinDate" ngbDatepicker #checkinDatePicker="ngbDatepicker"
@@ -41,7 +31,7 @@
     </div>
 
   </div>
-  <div fxFlex="23" fxLayout="column"  fxLayoutAlign="center center" class="form-section">
+  <div fxFlex="23"   fxFlex.xs="100" fxLayout="column"  fxLayoutAlign="center center" class="form-section">
     <div>Check Out</div>
     <div class="input-container">
       <input type="text" placeholder="Date" [(ngModel)]="checkoutDate" ngbDatepicker #checkoutDatePicker="ngbDatepicker"
@@ -51,7 +41,7 @@
 
 
   </div>
-  <div fxFlex="27"  fxLayout="column"  fxLayoutAlign="center center"  class="form-section-two">
+  <div fxFlex="27"   fxFlex.xs="100" fxLayout="column"  fxLayoutAlign="center center"  class="form-section-two">
     <div>Guests</div>
     <div class="select-container">
 
@@ -65,7 +55,7 @@
       <i class="fa-solid fa-angle-down icon-right"></i>
     </div>
   </div>
-  <div fxFlex="27" class="btn-section" fxLayout="column" fxLayoutAlign="center center" (click)="navigate('/hotel-booking')">
+  <div fxFlex="27"  fxFlex.xs="100" class="btn-section" fxLayout="column" fxLayoutAlign="center center" (click)="navigate('/hotel-booking')">
     <div>Check</div>
     <div>Availabilty</div>
   </div>

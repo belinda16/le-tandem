@@ -32,9 +32,9 @@
 
 
       <div class="section-one space-bottom">
-        <div class="form-row" fxLayout="row" >
+        <div class="form-row" fxLayout="row" fxLayout.xs="row wrap" >
 
-          <div fxFlex="22">
+          <div fxFlex="22" fxFlex.xs="33">
             <div class="select-container">
 
 
@@ -47,18 +47,18 @@
               <i class="fa-solid fa-angle-down icon-right"></i>
             </div>
           </div>
-          <div fxFlex="21">
+          <div fxFlex="21" fxFlex.xs="33">
             <div class="input-container">
               <input type="text" placeholder="Date" [(ngModel)]="date" ngbDatepicker #checkoutDatePicker="ngbDatepicker"
                 (click)="checkoutDatePicker.toggle()">
               <i class="fa-solid fa-angle-down icon-right"></i>
             </div>
           </div>
-          <div fxFlex="22" >
+          <div fxFlex="22"  fxFlex.xs="34">
             <div class="select-container">
 
 
-              <select>
+              <select class="remove-border">
                 <option value="" disabled selected>Time</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
@@ -67,7 +67,7 @@
               <i class="fa-solid fa-angle-down icon-right"></i>
             </div>
           </div>
-          <div fxFlex="35" class="btn-div" (click)="nextClick()" fxLayout="row" fxLayoutAlign="center center" >
+          <div fxFlex="35" fxFlex.xs="100" class="btn-div" (click)="nextClick()" fxLayout="row" fxLayoutAlign="center center" >
             <span>Find A Table</span>
           </div>
 
@@ -89,7 +89,7 @@
           <p class="date">Monday 24 June, 2024</p>
 
           <div fxLayout="row wrap">
-            <div fxFlex="20" *ngFor="let time of times" fxLayout="row" fxLayoutAlign="center center" (click)="nextClick()">
+            <div fxFlex="20" fxFlex.xs="33" *ngFor="let time of times" fxLayout="row" fxLayoutAlign="center center" (click)="nextClick()">
 
               <span class="chip">
                 <img src="assets/images/table.svg">

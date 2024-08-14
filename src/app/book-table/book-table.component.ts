@@ -7,11 +7,12 @@ import { RoomCardComponent } from '../room-card/room-card.component';
 import { GalleryItem, GalleryModule, ImageItem } from 'ng-gallery';
 import { FooterComponent } from '../footer/footer.component';
 import { Router } from '@angular/router';
+import { MenuComponent } from "../menu/menu.component";
 
 @Component({
   selector: 'app-book-table',
   standalone: true,
-  imports: [CommonModule,FlexLayoutModule,FormsModule, NgbDatepickerModule,RoomCardComponent,GalleryModule,FooterComponent],
+  imports: [CommonModule, FlexLayoutModule, FormsModule, NgbDatepickerModule, RoomCardComponent, GalleryModule, FooterComponent, MenuComponent],
   templateUrl: './book-table.component.html',
   styleUrl: './book-table.component.scss'
 })
