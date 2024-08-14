@@ -10,7 +10,7 @@ import { FlexLayoutModule } from 'ngx-flexible-layout';
   styleUrl: './details-reservation-form.component.scss'
 })
 export class DetailsReservationFormComponent {
-  <app-menu></app-menu>
+
 
   @Output() backClick = new EventEmitter<any>()
 
