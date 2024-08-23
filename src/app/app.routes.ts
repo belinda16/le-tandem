@@ -12,5 +12,5 @@ export const routes: Routes = [
   {path: 'book-room', component: BookTableComponent},
   {path: 'hotel-booking', component: DeatilsReservationFormHotelComponent},
   {path: 'resturant-booking', component: ResturantBookingComponent},
-  { path: '**', redirectTo: 'home', pathMatch: 'full' }
+  // { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
