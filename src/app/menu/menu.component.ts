@@ -20,6 +20,7 @@ export class MenuComponent {
 
   navigate(route: string){
     this.router.navigate([route])
+    this.toggleMenu()
   }
 
   toggleMenu() {
