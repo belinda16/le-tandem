@@ -5,13 +5,23 @@
   background-repeat: no-repeat;
 
   @media screen and (max-width: 600px) {
-    background:linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url('/assets/images/mobile-bg-one.png');
+    background: linear-gradient(0deg, rgba(5, 5, 5, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/images/mobile-bg-one.png');
+    height: 100vh;
+    background-repeat: round;
+
+
   }
 
   .logo{
     font-family: 'PinyonScript';
     color: #ffffff;
     font-size: 150px;
+
+
+    @media screen and (max-width: 600px) {
+      text-align: center;
+      font-size: 100px;
+    }
   }
 
   .tag{
@@ -19,6 +29,11 @@
     color: #ffffff;
     font-size: 40px;
     margin-top: -5%;
+
+    @media screen and (max-width: 600px) {
+      text-align: center;
+      font-size: 25px;
+    }
 
   }
 }
