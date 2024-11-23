@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 export class ApiServiceService {
 
   // private deployBase = '';
-  private deployBase = '/api/api.php?endpoint=';
+  private deployBase = 'https://letandemaccra.com/api.php?endpoint=';
   private getAvailableSlotsResturantUrl = `${this.deployBase}slots&`;
   private getAvailableSlotsResturantSetingUrl = `${this.deployBase}slot&`;
   private getListingInfoUrl = `${this.deployBase}listing&id=`;
