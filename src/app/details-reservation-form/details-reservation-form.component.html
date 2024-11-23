@@ -32,34 +32,28 @@
       <div class="book-room-flex">
         <div class="form-container" fxLayout="column" fxLayoutAlign="space-between start">
           <form>
-            <input type="text" id="first-name" placeholder="First name">
+            <input type="text" id="first-name" placeholder="First name" name="customerName" [(ngModel)]="form.customerName" >
             <input type="text" id="last-name" placeholder="Last name">
             <div class="phone-number">
               <select>
                 <option value="" disabled selected>GH</option>
-                <option value="1">GH1</option>
-                <option value="2">GH2</option>
-                <option value="3">GH3</option>
               </select>
-              <input type="tel" id="phone-number" placeholder="Phone number">
+              <input type="tel" id="phone-number" name="customerPhone" [(ngModel)]="form.customerPhone" placeholder="Phone number">
             </div>
-            <input type="email" id="email" placeholder="Email">
-            <select>
+            <input type="email" id="email" placeholder="Email" name="customerEmail" [(ngModel)]="form.customerEmail">
+            <!-- <select>
               <option value="" disabled selected>Select occasion (optional)</option>
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
               <option value="3">Option 3</option>
-            </select>
+            </select> -->
             <input type="text" id="special-requests" placeholder="Add special requests (optional)">
-            <button class="submit">Confirm reservation</button>
+            <button class="submit" type="button" (click)="submit()">Confirm reservation</button>
           </form>
         </div>
 
         <div class="info-container" fxLayout="column" fxLayoutAlign="space-between start">
           <div class="heading">Le Tandem</div>
-          <span>Monday, 24 June - Tuesday, 25 June</span>
-          <span>11am (Check in time)</span>
-          <span>3 people</span>
           <span>108 Nii Nortei Nyanchi Street</span>
 
           <div class="hr"></div>

@@ -24,14 +24,14 @@
 
       <div class="heading-1">Reservation at Le Tandem</div>
       <div class="heading-2">Select A Seating Type</div>
-      <div class="heading-3">The following options are available for a reservation on June 20th, 7:00 pm.</div>
+      <!-- <div class="heading-3">The following options are available for a reservation on June 20th, 7:00 pm.</div> -->
 
       <div class="select-container" fxLayout="row" fxLayoutAlign="space-between center" >
         <div class="options">
           <div>Le Tandem Restaurant</div>
           <span>Indoors</span>
         </div>
-        <button  (click)="next()">Select</button>
+        <button  (click)="next('indoor')">Select</button>
       </div>
       <hr>
       <div class="select-container" fxLayout="row" fxLayoutAlign="space-between center" >
@@ -39,7 +39,7 @@
           <div>Le Tandem Pool</div>
           <span>Outside</span>
         </div>
-        <button (click)="next()">Select</button>
+        <button (click)="next('outdoor')">Select</button>
       </div>
       <hr>
 

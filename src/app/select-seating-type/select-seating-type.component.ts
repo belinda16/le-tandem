@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { FlexLayoutModule } from 'ngx-flexible-layout';
 
 @Component({
@@ -12,15 +13,27 @@ import { FlexLayoutModule } from 'ngx-flexible-layout';
 export class SelectSeatingTypeComponent {
 
 
+  seating = ''
+  constructor(private router: Router){
+
+  }
+
+
   @Output() backClick = new EventEmitter<any>()
+  @Output() seatingSelect = new EventEmitter<any>()
 
 
   back(){
-    this.backClick.emit(0)
+    this.router.navigate(['/home'])
   }
 
-  next(){
-    this.backClick.emit(2)
+  next(seating: any){
+    this.seatingSelect.emit(seating)
+    this.backClick.emit(1)
+  }
+
+  setSeating(seating: any){
+    this.seating = seating
   }
 
 }

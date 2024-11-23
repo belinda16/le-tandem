@@ -16,46 +16,31 @@
 
       <div class="hr"></div>
 
-      <div class="heading-3">Due to limited availability, we can hold this table for you for 5:00 minutes</div>
       <div class="book-room-flex">
         <div class="form-container" fxLayout="column" fxLayoutAlign="space-between start">
           <form>
-            <input type="text" id="first-name" placeholder="First name">
-            <input type="text" id="last-name" placeholder="Last name">
-            <div class="phone-number">
-              <select>
-                <option value="" disabled selected>GH</option>
-                <option value="1">GH1</option>
-                <option value="2">GH2</option>
-                <option value="3">GH3</option>
-              </select>
-              <input type="tel" id="phone-number" placeholder="Phone number">
-            </div>
-            <input type="email" id="email" placeholder="Email">
-            <select>
-              <option value="" disabled selected>Select occasion (optional)</option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-            </select>
-            <input type="text" id="special-requests" placeholder="Add special requests (optional)">
-            <button class="submit">Confirm reservation</button>
+            <input type="text" id="first-name" placeholder="First name" name="customer_name" [(ngModel)]="formData.first_name">
+            <input type="text" id="last-name" placeholder="Last name" name="customer_name"  [(ngModel)]="formData.last_name">
+
+
+              <input type="tel" id="phone-number" placeholder="Phone number"  name="phone"  [(ngModel)]="formData.phone">
+            <input type="email" id="email" placeholder="Email"  name="customer_email"  [(ngModel)]="formData.customer_email">
+            <input type="text" id="special-requests" placeholder="Add special requests (optional)"   name="requests"  [(ngModel)]="formData.requests">
+            <button class="submit" (click)="getCustomerInfo()">Confirm reservation</button>
           </form>
         </div>
 
         <div class="info-container" fxLayout="column" fxLayoutAlign="space-between start">
           <div class="heading">Le Tandem Room</div>
-          <span>Monday, 24 June - Tuesday, 25 June</span>
-          <span>11am (Check in time)</span>
-          <span>3 people</span>
+          <span>{{getDate(data.checkIn) | date: 'EEEE dd, MMMM yyyy'}} - {{getDate(data.checkOut) | date: 'EEEE dd, MMMM yyyy'}}</span>
+          <span>2pm (Check in time)</span>
+          <span>{{data.numberOfPeople}} people</span>
           <span>108 Nii Nortei Nyanchi Street</span>
 
           <div class="hr"></div>
 
           <div class="heading">What to know</div>
-          <p class="important">Important dining information</p>
-          <p>We have a 20 minute before check in grace period to cancel booking. After that a cancellation fee will be
-            charged.</p>
+          <p class="important">Important check in information</p>
           <p>We may contact you about this reservation, so please ensure your email and phone number are up to date…</p>
           <p>Thank you for choosing Le Tandem.</p>
         </div>
@@ -63,4 +48,9 @@
     </div>
   </div>
 
+</div>
+
+
+<div id="loading" *ngIf="loading">
+  <img src="assets/images/loading.gif" alt="Loading...">
 </div>

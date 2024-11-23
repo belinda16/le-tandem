@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgbDatepicker, NgbDatepickerModule, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { FlexLayoutModule } from 'ngx-flexible-layout';
@@ -20,18 +20,27 @@ export class HomeComponent implements OnInit {
 
   date!: any
 
-
+  private hasPlayed = false;
   checkinDate!: any
   checkoutDate!: any
   private _model!: NgbDateStruct;
-
+  numberOfPeople!: any;
   slides = [
     { img: "assets/images/gallery-two.png" },
-    { img: "assets/images/gallery-one.png" },
+    { img: "assets/site/IMG_1406.jpg" },
     { img: "assets/images/gallery-four.png" },
-    { img: "assets/images/gallery-three.png" },
+    { img: "assets/site/IMG_7765.jpg" },
     { img: "assets/images/gallery-one.png" },
+    { img: "assets/site/IMG_8920.jpg" },
   ];
+
+  @ViewChild('audio', { static: true }) audio!: ElementRef<HTMLAudioElement>;
+
+  playAudio(): void {
+    this.audio.nativeElement.play();
+  }
+
+
 
   constructor(private router: Router){
 
@@ -42,12 +51,30 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    window.addEventListener('scroll', this.onScroll);
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
+    this.playAudio()
 
   }
+
+  private onScroll = (): void => {
+    if (this.hasPlayed) {
+      return; // Avoid replaying the audio
+    }
+
+    const audioEl = this.audio.nativeElement;
+    audioEl.play()
+      .then(() => {
+        console.log('Audio playing on scroll');
+        this.hasPlayed = true; // Mark as played
+        window.removeEventListener('scroll', this.onScroll); // Remove listener to prevent further plays
+      })
+      .catch(error => console.error('Error playing audio:', error));
+  };
 
 
 
@@ -85,6 +112,17 @@ export class HomeComponent implements OnInit {
     // Logic to smoothly transition images
   }
 
+
+  saveAvail(){
+    const body = {
+      checkIn: this.checkinDate,
+      checkOut: this.checkoutDate,
+      numberOfPeople: this.numberOfPeople
+    }
+
+    sessionStorage.setItem('hkey', JSON.stringify(body))
+    this.router.navigate(['/book-room'])
+  }
 
 
 

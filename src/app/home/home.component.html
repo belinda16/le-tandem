@@ -1,3 +1,8 @@
+<audio #audio autoplay>
+  <source src="assets/audio/audio.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
 <div class="home-container">
   <div fxLayout="row" fxLayoutAlign="space-between center" class="home-nav">
     <app-menu></app-menu>
@@ -15,7 +20,7 @@
   <div class="section-one" fxFlex="33"   fxFlex.xs="100"  fxLayout="row" fxLayoutAlign="center center"  (click)="navigate('/resturant-booking')">
     Reserve a Table
   </div>
-  <div class="section-two" fxFlex="34"  fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center center"   (click)="navigate('/hotel-booking')">
+  <div class="section-two" fxFlex="34"  fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center center"   (click)="navigate('/book-room')">
     Reserve a Room
   </div>
   <div class="section-one" fxFlex="33" fxFlex.xs="100"  xfLayout="row" fxLayoutAlign="center center">
@@ -209,16 +214,15 @@
     <div fxFlex="27"  fxFlex.xs="100" fxLayout="column"  fxLayoutAlign="center center"  class="form-section-two">
       <div>Guests</div>
       <div class="select-container">
-        <select>
+        <select [(ngModel)]="numberOfPeople" name="numberOfPeople">
           <option value="" disabled selected>No.</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
         </select>
         <i class="fa-solid fa-angle-down icon-right"></i>
       </div>
     </div>
-    <div fxFlex="27" fxFlex.xs="100" class="btn-section" fxLayout="column" fxLayoutAlign="center center" (click)="navigate('/hotel-booking')">
+    <div fxFlex="27" fxFlex.xs="100" class="btn-section" fxLayout="column" fxLayoutAlign="center center" (click)="saveAvail()">
       <div>Check</div>
       <div>Availabilty</div>
     </div>

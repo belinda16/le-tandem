@@ -1,12 +1,12 @@
-<div fxLayout="column" class="room-card-container">
+<div fxLayout="column" class="room-card-container" *ngIf="data">
   <div class="section-one" fxLayout="row">
     <div fxFlex="70" fxLayout="column">
-      <span class="heading">Le Tandem Room Name
+      <span class="heading">{{data.name}}
       </span>
 
     </div>
     <div fxFlex="30" fxLayout="column" fxLayoutAlign="center center">
-      <span class="price">$150</span>
+      <span class="price">{{data.price | currency: 'USD'}}</span>
       <span class="rate">Per Night</span>
     </div>
   </div>
@@ -15,7 +15,7 @@
     <div fxFlex="70" fxFlex.xs="100"  fxLayout="column">
 
 
-      <span class="text">Each room features elegant décor, premium amenities, and plush bedding to ensure a restful and rejuvenating stay. Enjoy the warm, personalised service of our establishment and make yourself at home in the heart of Accra.
+      <span class="text">{{data.description}}
       </span>
     </div>
 
@@ -42,3 +42,21 @@
 
   </div>
 </div>
+
+
+
+<div class="gallery">
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    @for (slide of slides; track slide.img) {
+    <div ngxSlickItem class="slide tile">
+      <img src="{{slide.img}}" alt="" class="img">
+    </div>
+    }
+  </ngx-slick-carousel>
+</div>
+
+<div class="space-top space-bottom">
+  <button class="btn-custom center" (click)="makeBooking(data.id)">Make Booking</button>
+</div>
+
+<!-- (click)="navigate('/hotel-booking')" -->

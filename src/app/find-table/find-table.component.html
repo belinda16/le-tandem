@@ -13,10 +13,10 @@
     </svg>
   </div>
 
-  <div class="form-section"fxLayoutAlign="center center" fxFlex>
+  <div class="form-section" fxLayoutAlign="center center" fxFlex>
 
 
-    <div class="form" fxLayout="column" >
+    <div class="form" fxLayout="column">
 
       <div (click)="back()">
         <i class="fa-solid fa-chevron-left me-2"></i>
@@ -32,71 +32,68 @@
 
 
       <div class="section-one space-bottom">
-        <div class="form-row" fxLayout="row" fxLayout.xs="row wrap" >
+        <div class="form-row" fxLayout="row" fxLayout.xs="row wrap">
 
           <div fxFlex="22" fxFlex.xs="33">
             <div class="select-container">
 
 
-              <select>
+              <select [(ngModel)]="form.numberOfPeople">
                 <option value="" disabled selected>People</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
+                <option *ngFor="let num of numbers" [value]="num">{{num}}</option>
+                <!-- <option value="2">Option 2</option>
+                <option value="3">Option 3</option> -->
               </select>
               <i class="fa-solid fa-angle-down icon-right"></i>
             </div>
           </div>
           <div fxFlex="21" fxFlex.xs="33">
             <div class="input-container">
-              <input type="text" placeholder="Date" [(ngModel)]="date" ngbDatepicker #checkoutDatePicker="ngbDatepicker"
-                (click)="checkoutDatePicker.toggle()">
+              <input type="text" placeholder="Date" [(ngModel)]="form.date" ngbDatepicker
+                #checkoutDatePicker="ngbDatepicker" (click)="checkoutDatePicker.toggle()">
               <i class="fa-solid fa-angle-down icon-right"></i>
             </div>
           </div>
-          <div fxFlex="22"  fxFlex.xs="34">
+          <div fxFlex="22" fxFlex.xs="34">
             <div class="select-container">
 
 
-              <select class="remove-border">
+              <select class="remove-border" [(ngModel)]="form.slotId">
                 <option value="" disabled selected>Time</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
+                <option *ngFor="let time of times" [value]="time.id">{{time.slot_time}}</option>
               </select>
               <i class="fa-solid fa-angle-down icon-right"></i>
             </div>
           </div>
-          <div fxFlex="35" fxFlex.xs="100" class="btn-div" (click)="nextClick()" fxLayout="row" fxLayoutAlign="center center" >
-            <span>Find A Table</span>
+          <div fxFlex="35" fxFlex.xs="100" class="btn-div" fxLayout="row" fxLayoutAlign="center center">
+            <span (click)="submit()">Find A Table</span>
           </div>
 
         </div>
       </div>
 
 
-      <div class="center-text section-two space-bottom">
-        <span>Reserve a table now or check below for other available times and dates</span>
+      <div class="center-text section-two space-bottom" *ngIf="unAvail">
+        <span>Unfortunately we do not have a table available for the selected time. Please check below for other available times</span>
       </div>
 
 
-      <div class="section-three"  fxLayout="column" fxLayoutGap="10px">
+      <div class="section-three" fxLayout="column" fxLayoutGap="10px"  *ngIf="unAvail">
         <span class="heading">Other Available Times</span>
 
         <div class="hr"></div>
 
         <div class="available-section">
-          <p class="date">Monday 24 June, 2024</p>
+          <!-- <p class="date">Monday 24 June, 2024</p> -->
 
           <div fxLayout="row wrap">
-            <div fxFlex="20" fxFlex.xs="33" *ngFor="let time of times" fxLayout="row" fxLayoutAlign="center center" (click)="nextClick()">
+            <div fxFlex="20" fxFlex.xs="33" *ngFor="let time of times" fxLayout="row" fxLayoutAlign="center center"
+              (click)="nextClick()">
 
               <span class="chip">
                 <img src="assets/images/table.svg">
-                {{time}}
+                {{time.slot_time}}
               </span>
-
-
             </div>
           </div>
         </div>

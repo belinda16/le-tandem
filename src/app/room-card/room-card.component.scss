@@ -118,3 +118,29 @@
     }
   }
 }
+
+
+
+.gallery {
+  background-color: #FAFAF9;
+  padding: 15px 20px;
+
+
+  .img{
+    width: 450px;
+  }
+
+  .tile {
+    padding: 5px !important;
+  }
+}
+
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}

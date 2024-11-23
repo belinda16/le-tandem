@@ -19,7 +19,7 @@
     min-width: 500px;
     max-width: 830px;
     max-height: 1030px;
-    min-height: 600px;
+    min-height: 300px;
     border: 1px solid #c4c4c4;
     border-radius: 5px;
 
@@ -109,7 +109,7 @@
 
   .select-container select {
     width: 100%;
-    padding: 10px 40px;
+    padding: 10px 10px;
     box-sizing: border-box;
     appearance: none;
     /* Remove default dropdown arrow */
@@ -148,10 +148,12 @@
 
   .input-container input {
     width: 100%;
-    padding: 10px 40px;
+    padding: 10px 10px;
+
     box-sizing: border-box;
     border: none;
     border-right: 1px solid #c7c7c7;
+    text-align: center;
 
 
   }

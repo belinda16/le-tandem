@@ -10,7 +10,7 @@ import { DeatilsReservationFormHotelComponent } from './deatils-reservation-form
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'book-room', component: BookTableComponent},
-  {path: 'hotel-booking', component: DeatilsReservationFormHotelComponent},
+  {path: 'hotel-booking/:id', component: DeatilsReservationFormHotelComponent},
   {path: 'resturant-booking', component: ResturantBookingComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];

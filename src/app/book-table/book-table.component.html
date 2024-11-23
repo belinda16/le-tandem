@@ -25,7 +25,7 @@
   <div fxFlex="23"   fxFlex.xs="100"fxLayout="column" fxLayoutAlign="center center" class="form-section">
     <div>Check In</div>
     <div class="input-container">
-      <input type="text" placeholder="Date" [(ngModel)]="checkinDate" ngbDatepicker #checkinDatePicker="ngbDatepicker"
+      <input type="text" placeholder="Date" [(ngModel)]="formData.checkIn" ngbDatepicker #checkinDatePicker="ngbDatepicker"
         (click)="checkinDatePicker.toggle()">
       <i class="fa-solid fa-angle-down icon-right"></i>
     </div>
@@ -34,7 +34,7 @@
   <div fxFlex="23"   fxFlex.xs="100" fxLayout="column"  fxLayoutAlign="center center" class="form-section">
     <div>Check Out</div>
     <div class="input-container">
-      <input type="text" placeholder="Date" [(ngModel)]="checkoutDate" ngbDatepicker #checkoutDatePicker="ngbDatepicker"
+      <input type="text" placeholder="Date" [(ngModel)]="formData.checkOut" ngbDatepicker #checkoutDatePicker="ngbDatepicker"
         (click)="checkoutDatePicker.toggle()">
       <i class="fa-solid fa-angle-down icon-right"></i>
     </div>
@@ -45,37 +45,43 @@
     <div>Guests</div>
     <div class="select-container">
 
-
-      <select>
+      <select name="numberOfPeople" [(ngModel)]="formData.numberOfPeople">
         <option value="" disabled selected>No.</option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
       </select>
       <i class="fa-solid fa-angle-down icon-right"></i>
     </div>
   </div>
-  <div fxFlex="27"  fxFlex.xs="100" class="btn-section" fxLayout="column" fxLayoutAlign="center center" (click)="navigate('/hotel-booking')">
+  <div fxFlex="27"  fxFlex.xs="100" class="btn-section" fxLayout="column" fxLayoutAlign="center center" (click)="checkAvail()">
     <div>Check</div>
     <div>Availabilty</div>
   </div>
 </div>
 
 <div fxlayout="column" class="rooms-container">
-  <app-room-card></app-room-card>
+
+  <div [hidden]="!isData">
+
+    <div *ngFor="let room of rooms">
+      <app-room-card [data]="room" ></app-room-card>
+    </div>
+
+  </div>
+
+  <div *ngIf="!isData" class="new-sec">
+      <p class="text">{{message}}</p>
+  </div>
+
 
 
 </div>
 
 
-<div class="gallery-container">
-  <gallery [items]="images" thumbPosition="left"></gallery>
-</div>
 
-
-<div class="space-bottom">
-  <button class="btn-custom center" (click)="navigate('/hotel-booking')">Make Booking</button>
-</div>
 
 <app-footer></app-footer>
 
+<div id="loading" *ngIf="loading">
+  <img src="assets/images/loading.gif" alt="Loading...">
+</div>

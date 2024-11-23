@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+        "target": "https://letandemaccra.com/",
+        "secure": false,
+        "changeOrigin": true,
+        "pathRewrite": { "^/api": "" }
+    }
+}

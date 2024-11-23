@@ -1,3 +1,24 @@
-<app-find-table *ngIf="active === 0" (backClick)="setNewIndex($event)"> </app-find-table>
-<app-select-seating-type *ngIf="active === 1" (backClick)="setNewIndex($event)"></app-select-seating-type>
-<app-details-reservation-form *ngIf="active === 2" (backClick)="setNewIndex($event)"></app-details-reservation-form>
+<ng-template #standardTpl> I'm a standard toast </ng-template>
+
+<div [hidden]="active !== 0">
+  <app-select-seating-type  (backClick)="setNewIndex($event)" (seatingSelect)="getSeatingAvailableTimes($event)"></app-select-seating-type>
+</div>
+<div [hidden]="active !== 1">
+
+  <app-find-table (backClick)="setNewIndex($event)" [times]="seatingTimes" [unAvail]="unAvail"  (getTableInfo)="getTableInfo($event)"> </app-find-table>
+</div>
+
+
+<div [hidden]="active !== 2">
+
+  <app-details-reservation-form [data]="tableInfo" (backClick)="setNewIndex($event)" (formInfo)="getCustomerInfo($event)"></app-details-reservation-form>
+
+</div>
+
+
+
+<div id="loading" *ngIf="loading">
+  <img src="assets/images/loading.gif" alt="Loading...">
+</div>
+
+
