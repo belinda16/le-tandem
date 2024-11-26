@@ -33,6 +33,8 @@ export class HomeComponent implements OnInit {
     { img: "assets/images/gallery-one.png" },
     { img: "assets/site/IMG_8920.jpg" },
   ];
+  currentIndexs = 0;
+  private interval: any;
 
   @ViewChild('audio', { static: true }) audio!: ElementRef<HTMLAudioElement>;
 
@@ -44,6 +46,11 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router){
 
+  }
+
+  openPdf(): void {
+    const pdfUrl = 'assets/menu.pdf';
+    window.open(pdfUrl, '_blank');
   }
 
   navigate(route: string){
@@ -58,7 +65,24 @@ export class HomeComponent implements OnInit {
       behavior: 'smooth',
     });
     this.playAudio()
+    this.startSlideshow();
 
+  }
+
+  ngOnDestroy() {
+    this.stopSlideshow();
+  }
+
+  startSlideshow() {
+    this.interval = setInterval(() => {
+      this.currentIndexs = (this.currentIndexs + 1) % this.slides.length;
+    }, 3000);
+  }
+
+  stopSlideshow() {
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
   }
 
   private onScroll = (): void => {
@@ -86,7 +110,7 @@ export class HomeComponent implements OnInit {
   };
 
 
-  images = ["assets/images/hotel-gallery-one.png", "assets/images/hotel-gallery-two.png", "assets/images/hotel-gallery-three.png"];
+  images = ["assets/images/hotel-gallery-one.png", "assets/images/hotel-gallery-two.png", "assets/site/IMG_1609.jpg"];
 
   currentIndex = 0;
 

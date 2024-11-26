@@ -4,6 +4,12 @@
 </audio>
 
 <div class="home-container">
+  <!-- Background video for mobile -->
+  <video class="home-video"   loop muted autoplay playsinline oncanplay="this.play()" onloadedmetadata="this.muted = true" >
+    <source src="assets/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
   <div fxLayout="row" fxLayoutAlign="space-between center" class="home-nav">
     <app-menu></app-menu>
 
@@ -12,7 +18,7 @@
     </div>
 
     <div class="no-mobile-flex">
-      <button class="btn-custom"  (click)="navigate('/resturant-booking')">Reserve</button>
+      <button class="btn-custom" (click)="navigate('/resturant-booking')">Reserve</button>
     </div>
   </div>
 </div>
@@ -160,6 +166,10 @@
   </ngx-slick-carousel>
 </div>
 
+<!-- <div class="slideshow-container">
+  <img [src]="slides[currentIndexs].img" alt="Slide image" class="slide-image" />
+</div> -->
+
 <div class="menu-section">
 
   <div fxLayout="column" fxLayoutAlign="center center">
@@ -171,7 +181,7 @@
 
   <div class="menu-view" fxLayout="row" fxLayout.xs="column">
     <div class="indoor-section" fxFlex="45" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="end center" >
-      <button class="btn-custom">Indoor Seating Menu</button>
+      <button class="btn-custom" (click)="openPdf()">Indoor Seating Menu</button>
     </div>
     <div fxFlex="5" class="no-mobile-flex"></div>
     <div class="outdoor-section" fxFlex="45" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="end center" >
