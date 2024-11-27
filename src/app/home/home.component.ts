@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
   checkoutDate!: any
   private _model!: NgbDateStruct;
   numberOfPeople!: any;
+
   slides = [
     { img: "assets/images/gallery-two.png" },
     { img: "assets/site/IMG_1406.jpg" },
@@ -35,6 +36,32 @@ export class HomeComponent implements OnInit {
   ];
   currentIndexs = 0;
   private interval: any;
+  times = [
+    {
+        "id": "1",
+        "slot_time": "18:00:00"
+    },
+    {
+        "id": "2",
+        "slot_time": "18:30:00"
+    },
+    {
+        "id": "4",
+        "slot_time": "19:30:00"
+    },
+    {
+        "id": "5",
+        "slot_time": "20:00:00"
+    },
+    {
+        "id": "6",
+        "slot_time": "20:30:00"
+    },
+    {
+        "id": "7",
+        "slot_time": "21:00:00"
+    }
+];
 
   @ViewChild('audio', { static: true }) audio!: ElementRef<HTMLAudioElement>;
 

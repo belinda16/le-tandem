@@ -1,8 +1,3 @@
-<audio #audio autoplay>
-  <source src="assets/audio/audio.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
 <div class="home-container">
   <!-- Background video for mobile -->
   <video class="home-video"   loop muted autoplay playsinline oncanplay="this.play()" onloadedmetadata="this.muted = true" >
@@ -128,12 +123,7 @@
 
           <select>
             <option value="" disabled selected>Select Time</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
+            <option value="1" *ngFor="let time of times" value="{{time.id}}">{{time.slot_time}}</option>
           </select>
           <i class="fa-solid fa-angle-down icon-right"></i>
         </div>
@@ -144,9 +134,12 @@
 
           <select>
             <option value="" disabled selected>No of People </option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
           </select>
           <i class="fa-solid fa-angle-down icon-right"></i>
         </div>
